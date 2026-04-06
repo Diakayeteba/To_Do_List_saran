@@ -1,0 +1,112 @@
+/*
+---------------------------------------------------------
+style.css
+Ce fichier gère uniquement l'apparence visuelle du projet.
+Le PHP s'occupe de la logique,
+le CSS s'occupe du design.
+---------------------------------------------------------
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-ajout {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.form-ajout input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.form-ajout button {
+    padding: 12px 18px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-ajout button:hover {
+    background: #0056b3;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafc;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.task-item span {
+    font-size: 16px;
+    color: #222;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button,
+.actions a {
+    padding: 8px 12px;
+    border: none;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.actions button {
+    background: #ffc107;
+    color: #222;
+}
+
+.actions button:hover {
+    background: #e0a800;
+}
+
+.actions a {
+    background: #dc3545;
+    color: white;
+    display: inline-block;
+}
+
+.actions a:hover {
+    background: #b02a37;
+}
+
+.vide {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+}
