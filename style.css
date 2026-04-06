@@ -1,0 +1,210 @@
+/* ============================================================
+   To-Do List – Saran Keita ka projet PHP natif
+   ============================================================ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #4a3f8f;
+    margin-bottom: 0.3rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.stat.total   { background: #e8e8f0; color: #4a3f8f; }
+.stat.pending { background: #fff3cd; color: #856404; }
+.stat.done    { background: #d4edda; color: #155724; }
+
+/* Add / Edit form */
+.add-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.add-form input[type="text"] {
+    flex: 1 1 200px;
+    padding: 0.7rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.add-form input[type="text"]:focus {
+    border-color: #667eea;
+}
+
+.add-form button[type="submit"] {
+    padding: 0.7rem 1.4rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.add-form button[type="submit"]:hover {
+    opacity: 0.88;
+}
+
+.btn-cancel {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7rem 1.2rem;
+    background: #f0f0f0;
+    color: #555;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-cancel:hover {
+    background: #e0e0e0;
+}
+
+/* Error */
+.error {
+    width: 100%;
+    color: #c0392b;
+    font-size: 0.9rem;
+    background: #fdecea;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    border-left: 4px solid #e74c3c;
+}
+
+/* Empty state */
+.empty {
+    text-align: center;
+    color: #aaa;
+    padding: 2rem 0;
+    font-size: 1rem;
+}
+
+/* Task list */
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: #f7f7fb;
+    border-left: 4px solid #667eea;
+    transition: background 0.2s;
+}
+
+.task-item.done {
+    border-left-color: #28a745;
+    background: #f4fbf6;
+}
+
+.task-item:hover {
+    background: #ededf9;
+}
+
+.task-item.done:hover {
+    background: #eaf6ee;
+}
+
+.task-title {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    word-break: break-word;
+    padding-right: 0.5rem;
+}
+
+.task-item.done .task-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+}
+
+.actions form {
+    display: inline;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.15s;
+    line-height: 1;
+}
+
+.btn-icon:hover {
+    background: rgba(0, 0, 0, 0.07);
+}
