@@ -1,0 +1,7 @@
+services:
+  todo-app:
+    build: .
+    container_name: todo_list_php
+    ports:
+      - "8085:80"
+    restart: unless-stopped
